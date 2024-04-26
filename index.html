@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h2 class="mb-3">Generador de Secuencia con base a la serie De Bruijn y conjuntos <br> <h3>conjuntos de 0 y 1</h3></h2>
+                <div class="mb-3">
+                    <label for="j1" class="form-label">Ingresa la cantidad de caracteres por conjuntos:</label>
+                    <input id="j1" type="number" min="1" max="10" class="form-control">
+                </div>
+                <button class="btn btn-outline-light mb-1" onclick="generarConjuntos()">Generar</button>
+                <table class="table table-bordered table-striped text-center mt-3">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Cantidad de Conjuntos Generados</th>
+                            <th>Tiempo de Ejecución (milisegundos)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="cantidad">-</td>
+                            <td id="tiempo">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mb-3">
+                    <h2 class="mb-3">Secuencia</h2>
+                    <p id="debruijn" style="word-wrap: break-word;"></p>
+                    <button id="resaltarBtn" class="btn btn-outline-light mt-1" onclick="resaltarNumeros()"><i class="bi bi-arrow-right"></i></button>
+                </div>
+                <div>
+                    <h2 class="mb-3">Conjuntos Generados</h2>
+                    <div id="conjuntos"></div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
